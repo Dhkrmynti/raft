@@ -1,0 +1,23 @@
+node_modules
+dist
+bot-config.json
+bot-state.json
+bot-logs.json
+.env
+.impeccable/config.local.json
+remotion-x/build
+remotion-x/out
+bot-bylines.json
+.DS_Store
+remotion-x/build2
+remotion-x/build-gz
+remotion-x/build-hl
+remotion-x/out
+remotion-x/build-kp
+remotion-x/build-hz
+remotion-x/build-hk
+remotion-x/out-news-*.json
+remotion-x/out-payslip.json
+
+# design tooling (local only)
+.impeccable/
