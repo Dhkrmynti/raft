@@ -100,7 +100,8 @@ export function Surface({ status, pond, offline }: { status: Status | null; pond
       if (!a || prefersReducedMotion() || (Math.abs(a.x - b.x) < 2 && Math.abs(a.y - b.y) < 2)) return;
       gsap.fromTo(n, { x: a.x - b.x, y: a.y - b.y }, { x: 0, y: 0, duration: 1.4, ease: "power2.inOut", clearProps: "transform" });
     });
-    last.current = now;
+    // keep the last place of anyone who just left the ten, so a seller drifts off from where it was
+    last.current = new Map([...last.current, ...now]);
   });
 
   useGSAP(
